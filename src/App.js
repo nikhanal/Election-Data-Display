@@ -111,8 +111,15 @@ function App() {
   //   },
   // ];
   const [data, setData] = useState([]);
-  // const [totalvotes, setTotalvotes] = useState();
+  const [totalvotes, setTotalvotes] = useState();
 
+  const calc = () => {
+    let total = 0;
+    data.map((item) => {
+      total += item.TotalVoteReceived;
+    });
+    setTotalvotes(total);
+  };
   useEffect(() => {
     setLoading(true);
     const url = "https://samanupatik-api.onrender.com/";
@@ -124,6 +131,9 @@ function App() {
         console.log(itm);
       });
   }, []);
+  useEffect(() => {
+    calc();
+  }, [data]);
   return (
     <div>
       <NavBar />
@@ -142,6 +152,7 @@ function App() {
           {data
             .filter((itms) => itms.TotalVoteReceived > 0)
             .map((itm) => {
+              console.log(totalvotes);
               return <Card partdetails={itm} />;
             })}
         </div>
