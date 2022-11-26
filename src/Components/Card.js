@@ -5,7 +5,7 @@ function Card(props) {
     <>
       <div className="card">
         <div className="card-image">
-          <img src={props.logos} alt="nishan" />
+          <img src={props.partdetails.Logo} alt="nishan" />
         </div>
         <div className="card-components">
           <div className="card-name">
@@ -17,16 +17,8 @@ function Card(props) {
           <div className="samanupatik-seats">
             <p>
               Samanupatik Seats:{" "}
-              {Math.round(
-                (props.partdetails.TotalVoteReceived / props.totalvote) * 110
-              )}
+              {Math.round(props.partdetails.SamanupatikSeats)}
             </p>
-          </div>
-          <div className="direct-seats">
-            <p>Direct Seats: 48</p>
-          </div>
-          <div className="total-seats">
-            <p>Total Seats: 78</p>
           </div>
         </div>
       </div>

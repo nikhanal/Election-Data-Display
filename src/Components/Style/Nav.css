@@ -9,6 +9,12 @@
   position: sticky;
   top: 0;
 }
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}
 .img-container {
   display: flex;
   justify-content: center;
@@ -20,4 +26,30 @@
   color: #000;
   margin-left: 10px;
   color: #d05c6c;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+  .heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .img-container span {
+    font-size: 0.8rem;
+    margin-left: 5px;
+  }
+  .img-container img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+  }
 }

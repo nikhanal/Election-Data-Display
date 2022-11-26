@@ -10,7 +10,7 @@ function NavBar() {
           <span> Live Update</span>
         </div>
         <div>
-          <h1>प्रतिनिधिसभा निर्वाचन २०७९</h1>
+          <h1 className="heading">प्रतिनिधिसभा निर्वाचन २०७९</h1>
         </div>
         <div>
           <Toggle />
